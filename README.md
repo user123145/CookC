@@ -1,2 +1,2 @@
-# C_ProjectForStudy
+# C_Project
 TIL
