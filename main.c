@@ -1,5 +1,13 @@
 #include <stdio.h>
+#include <string.h>
+
 int main()
-{
-    printf("HELLO WORLD");
+{   
+    scanf("%s",&s);
+
+    char a[] = s;
+
+    
+    printf("%s",a);
+
 }
