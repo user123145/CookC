@@ -17,20 +17,26 @@ void input(char *c)
             break;
         }
     }
-    char s1[size + 1];
-    strcpy(*c, s1);
-    for (int i = 0; i < size - 1; i++)
+    //새로운 배열 사이즈에 맞춰어서 할당.
+    char str2[size + 1];
+
+    int i = 0;
+    // size-1 값 : 앞에서 구한 사이즈를 활용.(size-1 이 문자열 마지막 인덱스).
+    for (size - 1; size > -1; size--)
     {
-        *(c + i) = s1[size - 2 - i];
+        //뒤에서부터 값을 가져와서 배열의앞에 입력.
+        str2[i] = *(c + size - 1);
+        i++;
     }
-    *(c + size - 1) = '\0';
+    //널문자 입력.
+    str2[size] = '\0';
+    printf(str2);
 }
 void main()
 {
-    char str[1000];
-    printf("문자열 입력(1000개미만) : ");
+    char str[1001];
+    printf("문자열 입력(1000개하의 문자열) : ");
     scanf("%s", str);
     printf("\n뒤집어진 문자열 : ");
     input(str);
-    printf(str);
 }
